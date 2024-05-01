@@ -1,0 +1,172 @@
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+.passwordInput {
+    position: relative;
+}
+
+.head{
+    margin-left: 20vw;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+.eyeIcon {
+    position: absolute;
+    left: 79vw; 
+    top: 48%; 
+    transform: translateY(-50%);
+    width: 2vw; 
+    height: auto;
+    cursor: pointer;
+    margin-top: 8vh;
+    margin-left: -19vw;
+   
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 30vh; 
+}
+
+.button {
+   position: relative;
+   width: 18vw;
+   height: 7vh;
+   border-radius: 3vw;
+   font-size: medium;
+   color: black;
+   border-color: black;
+   background-color: lightskyblue;
+   
+}
+
+.username{
+    display: flex;
+    flex-direction: row;
+}
+
+.password{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.text{
+    font-size:30px;
+    font-weight: 300;
+    margin-left: 5vw;
+    margin-top: 1vh;
+}
+
+.input1{
+    margin-left:8vw;
+    width: 30vw;
+    height: 5vh;
+    font-size: larger;
+}
+
+.input2{
+    margin-left:8.5vw;
+    width: 30vw;
+    height: 5vh;
+    font-size: larger;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px){
+   
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+    margin-top: 0;
+}
+
+.passwordInput {
+    position: relative;
+}
+
+.head{
+    margin-left: 5vw;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    font-size:x-large;
+}
+.eyeIcon {
+    position: absolute;
+    left: 79vw; 
+    top: 48%; 
+    transform: translateY(-50%);
+    width: 2vw; 
+    height: auto;
+    cursor: pointer;
+    margin-top: 8vh;
+    margin-left: -19vw;
+   
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 30vh; 
+}
+
+.button {
+   position: relative;
+   width: 25vw;
+   height: 7vh;
+   border-radius: 3vw;
+   font-size: medium;
+   color: black;
+   border-color: black;
+   background-color: lightskyblue;
+   
+}
+
+.username{
+    display: flex;
+    flex-direction: row;
+}
+
+.password{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.text{
+    font-size:20px;
+    font-weight: bold;
+    margin-left: -1vw;
+    margin-top: 1vh;
+}
+
+.input1{
+    margin-left:5vw;
+    width: 30vw;
+    height: 5vh;
+    font-size: medium;
+}
+
+.input2{
+    margin-left:5.5vw;
+    width: 30vw;
+    height: 5vh;
+    font-size: medium;
+}
+}
+
+
