@@ -5,6 +5,10 @@ import styles from './EditStory.module.css';
 import { DEFAULT_CATEGORIES } from '../../utils/constants';
 
 function EditStory() {
+
+  const name = localStorage.getItem('name')
+
+
   const { state } = useLocation();
   const navigate = useNavigate();
   const [stateData] = useState(state?.Story);
@@ -13,6 +17,7 @@ function EditStory() {
     Description: '' || stateData?.Description,
     Image: '' || stateData?.Image,
     Category: stateData?.Category || [],
+    username : stateData?.username || name
   });
 
 
@@ -46,7 +51,7 @@ function EditStory() {
   useEffect(() => {
     console.log(formData);
     console.log(state.Story._id)
-  }, [formData]);
+  }, []);
 
   return (
     <div>
@@ -61,6 +66,7 @@ function EditStory() {
               value={formData.Heading}
               onChange={handleChange}
               className={styles.input}
+              maxLength={21}
             />
             <br />
           </div>
@@ -73,6 +79,7 @@ function EditStory() {
               value={formData.Description}
               onChange={handleChange}
               className={styles.input}
+              maxLength={40}
             />
             <br />
           </div>
@@ -90,7 +97,7 @@ function EditStory() {
           </div>
           <div className={styles.p1}>
             <h2 className={styles.Category} >Category :</h2>
-            <select className={styles.input} name="Category" onChange={addCategory}>
+            <select className={styles.inputcategory} name="Category" onChange={addCategory}>
               <option disabled selected>
                 Please select Category
               </option>

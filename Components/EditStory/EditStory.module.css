@@ -27,8 +27,17 @@
     height: 5vh;
     margin-top: 5vh;
     margin-left: 10vw;
-
 }
+
+.inputcategory{
+    width: 30vw;
+    height: 5vh;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    cursor: pointer;
+}
+
+
 
 .des{
     overflow-wrap: break-word;
@@ -81,6 +90,7 @@
     background-color: #FF7373;
     border-radius: 2vw;
     border: none;
+    cursor: pointer;
 }
 
 

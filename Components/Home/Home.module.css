@@ -10,20 +10,62 @@
 .rightArrow{
   width: 2vw;
   padding-left: 1vw;
+  cursor: pointer;
 }
 
 .all, .health, .travel, .food, .movie, .education{
   width: 15vw;
   height: 30vh;
+  cursor: pointer;
 }
 
+.newdiv{
+  position: relative;
+}
 
+.newall{
+  color: white;
+  position: absolute;
+  margin-top: -20vh;
+  margin-left: 6vw;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
 
+.newtravel, .newfood, .newmov{
+  color: white;
+  position: absolute;
+  margin-top: -19vh;
+  margin-left: 4vw;cursor: pointer;
+}
 
+.newedu{
+  color: white;
+  position: absolute;
+  margin-top: -19vh;
+  margin-left: 3vw;cursor: pointer;
+}
+
+.newhealth, .newfit{
+  color: white;
+  position: absolute;
+cursor: pointer;
+}
+
+.newhealth{
+  margin-top: -22vh;
+  margin-left: 4vw;
+}
+
+.newfit{
+  margin-top: -17vh;
+  margin-left: 4vw;
+}
 
 
 .leftArrow{
   width: 3.8vw;
+  cursor: pointer;
 }
 
 .bottomIcons{
@@ -73,6 +115,7 @@
   display: block;
   width: 100%;
   height: 35vh;
+  cursor: pointer;
 }
 
 .imageWrapper {
@@ -81,7 +124,6 @@
   padding-bottom: 25px;
   border-radius: 5px;
 }
-
 
 .photos{
   width: 38vw;
@@ -116,9 +158,8 @@
   margin-left: 30vw;
   margin-top: -6vh;
   padding-top: 3vh;
-  
+  cursor: pointer;
 }
-
 
 .saved {
   position: fixed;
@@ -131,8 +172,6 @@
   
 }
 
-
-
 .like {
   position: fixed;
   right: 5vw;
@@ -141,6 +180,7 @@
   margin-right: 28.5vw;
   margin-top: -10.5vh;
   padding-top: 1vh;
+  cursor: pointer;
 }
 
 .liked {
@@ -151,9 +191,8 @@
   margin-right: 28.5vw;
   margin-top: -8.5vh;
   padding-top: 1vh;
+  cursor: pointer;
 }
-
-
 
 
 .share {
@@ -163,6 +202,7 @@
   width: 2vw;
   height: auto;
   margin-left: 2vw;
+  cursor: pointer;
 }
 
 .shared {
@@ -173,6 +213,7 @@
   height: auto;
   margin-left: 2vw;
   margin-top: 2vh;
+  cursor: pointer;
 }
 
 .cancel {
@@ -181,7 +222,7 @@
   left: 34vw;
   width: 1.5vw;
   height: auto;
-  
+  cursor: pointer;
 }
 
 .cancelled {
@@ -191,6 +232,7 @@
   width: 1.5vw;
   height: auto;
   margin-top: 2vh;
+  cursor: pointer;
 }
 
 .Edit{
@@ -198,6 +240,7 @@
   margin-top: -2vh;
   position: relative; 
   background-color: rgba(0, 0, 0, 0.001);
+  cursor: pointer;
 }
 
 .edit {
@@ -205,7 +248,7 @@
   position: relative;
   margin-left: 16vw;
   margin-bottom: 1vh;
-  
+  cursor: pointer;
 }
 
 .editText{
@@ -267,6 +310,7 @@
   border: none;
   background-color: #ff7373;
   margin-top: 2.5vh;
+  cursor: pointer;
 }
 
 .btn2 {
@@ -277,6 +321,7 @@
   color: white;
   background-color: #73abff;
   margin-top: 2.5vh;
+  cursor: pointer;
 }
 
 .see{
@@ -287,6 +332,7 @@
   background-color: #ff7373;
   border-radius: 1vw;
   border: none;
+  cursor: pointer;
 }
 
 
@@ -346,6 +392,7 @@
   margin-left: 50vw;
   position: fixed;
   margin-top: -50vh;
+  cursor: pointer;
 }
 
 .cut2{
@@ -361,6 +408,7 @@
 .about{
   margin-bottom: 5vh;
   margin-top: 4vh;
+  cursor: pointer;
   
 }
 

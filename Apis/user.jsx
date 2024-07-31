@@ -12,7 +12,6 @@ export const loginUser = async ({ Username, Password }) => {
     }
 }
 
-
 export const registerUser = async ({ Username, Password }) => {
     try {
         const reqUrl = `${backendUrl}/register`;
@@ -22,3 +21,5 @@ export const registerUser = async ({ Username, Password }) => {
         console.log(error)
     }
 }
+
+

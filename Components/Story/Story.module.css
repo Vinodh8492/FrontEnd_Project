@@ -47,7 +47,7 @@
 }
 
 .activeSlideButton {
-    
+    cursor: pointer;
     background-color: #fff;
     color: #007bff;
     border: 2px solid #007bff;
@@ -58,7 +58,7 @@
   }
 
   .slideButton {
-   
+    cursor: pointer;
     background-color: white;
     color: black;
     border-color: none;
@@ -96,6 +96,7 @@
     height: 5vh;
     margin-top: 3vh;
     margin-left: 3vw;
+    cursor: pointer;
 }
 
 .head{
@@ -109,6 +110,7 @@
 .add{
     width: 5vw;
     height: 6vh;
+    cursor: pointer;
 }
 
 .heading{
@@ -123,6 +125,7 @@
     border: none;
     background-color: #7EFF73;
     color: white;
+    cursor: pointer;
 }
 
 .next{
@@ -132,6 +135,7 @@
     border: none;
     background-color: #73ABFF;
     color: white;
+    cursor: pointer;
 }
 
 .post{
@@ -142,6 +146,7 @@
     background-color: #FF7373;
     color: white;
     margin-inline-start: auto;
+    cursor: pointer;
 }
 
 .last{

@@ -4,12 +4,17 @@ import { createStory } from '../../Apis/stories';
 import { DEFAULT_CATEGORIES } from '../../utils/constants';
 
 function Story() {
+
+  const name = localStorage.getItem('name')
+
+
   const [slides, setSlides] = useState([
     {
       Heading: '',
       Description: '',
       Image: '',
       Category: [],
+      username : name
     },
   ]);
 
@@ -46,6 +51,7 @@ function Story() {
     
     const response = await createStory(slides);
     alert(response?.message);
+    window.location.reload()
   };
 
   const handleNextSlide = () => {
@@ -62,7 +68,8 @@ function Story() {
         Heading: '',
         Description: '',
         Image: '',
-        Category: slides[0].Category, 
+        Category: slides[0].Category,
+        username : name 
       };
       setSlides([...slides, newSlide]);
       setActiveSlide(slides.length);
@@ -101,6 +108,7 @@ function Story() {
               value={slides[activeSlide].Heading}
               onChange={handleChange}
               className={styles.headinginput}
+              maxLength={21}
             />
             <br />
           </div>
@@ -113,6 +121,7 @@ function Story() {
               value={slides[activeSlide].Description}
               onChange={handleChange}
               className={styles.descriptioninput}
+              maxLength={40}
             />
             <br />
           </div>

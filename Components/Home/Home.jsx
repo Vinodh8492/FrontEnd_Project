@@ -31,6 +31,7 @@ function Home() {
   let { id } = useParams();
   const [showBookmarks, setShowBookmarks] = useState(false);
 
+
   const [Category, setCategory] = useState([]);
   const [Story, setStory] = useState([]);
   const [selectedSlide, setSelectedSlide] = useState(null);
@@ -45,6 +46,10 @@ function Home() {
   const [showStoryPageOverlay, setShowStoryPageOverlay] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+
+
+  const name = localStorage.getItem('name')
+
 
 
 
@@ -82,8 +87,6 @@ function Home() {
   }, [!token]);
 
 
-
-
   useEffect(() => {
     localStorage.setItem('savedSlides', JSON.stringify(savedSlides));
   }, [savedSlides]);
@@ -119,8 +122,6 @@ function Home() {
   };
 
 
-
-
   const toggleStoryPageOverlay = () => {
     setShowStoryPageOverlay(!showStoryPageOverlay);
   };
@@ -129,8 +130,8 @@ function Home() {
     const filterCategory = Category.join(",");
     const response = await allStories({ Category: filterCategory });
     setStory(response.data);
-
   };
+
 
   const fetchStoriesById = async () => {
     if (!id) return;
@@ -142,16 +143,9 @@ function Home() {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('name');
     setIsTokenPresent(!!token);
-
     fetchAllStories();
     fetchStoriesById();
   }, []);
-
-
-
-
-
-
 
 
   const handleCategory = (event) => {
@@ -165,7 +159,6 @@ function Home() {
     const currentIndex = Story.findIndex(story => story._id === slideId);
     setCurrentIndex(currentIndex);
   };
-
 
 
   const goToPreviousSlide = () => {
@@ -208,14 +201,10 @@ function Home() {
   };
 
   const handleSignIn = () => {
-
     const token = localStorage.getItem('token');
     if (token) {
       setIsTokenPresent(true);
     }
-
-
-
   };
 
   const handleShare = () => {
@@ -226,7 +215,6 @@ function Home() {
     }
     if (token) {
       const slideUrl = `${window.location.origin}/slide/${selectedSlide}`;
-
 
       navigator.clipboard.writeText(slideUrl)
         .then(() => {
@@ -246,8 +234,6 @@ function Home() {
 
   const [bookmarkedSlides, setBookmarkedSlides] = useState([]);
 
-
-
   const saveSlideToBookmarks = (slide) => {
     setBookmarkedSlides([...bookmarkedSlides, slide]);
   };
@@ -261,7 +247,6 @@ function Home() {
     localStorage.removeItem('savedSlides');
     setSavedSlides([]);
   };
-
 
 
   return (
@@ -360,7 +345,7 @@ function Home() {
                     <img src={Save} className={isTokenPresent ? styles.save : styles.saved} onClick={() => toggleSave(selectedSlide)} />
                   )}
                   <div className={styles.editContainer}>
-                    {isTokenPresent && (
+                    {isTokenPresent && selectedStory && name === selectedStory.username && (
                       <img src={Edited} className={styles.edit} onClick={() => {
                         navigate("/edit", {
                           state: {
@@ -392,12 +377,36 @@ function Home() {
 
           <div className={styles.imageswrapper} >
             <div className={styles.images}>
+              <div className={styles.newidv} >
               <img src={All} className={styles.all} alt="All" onClick={() => setCategory([])} />
+              <h1 className={styles.newall} onClick={() => setCategory([])}>All</h1>
+              </div>
+              
+              <div className={styles.newidv} >
               <img src={Medical} className={styles.health} alt="Health and Fitness" onClick={() => handleCategory({ target: { value: 'Health and Fitness' } })} />
+              <h1 className={styles.newhealth} onClick={() => handleCategory({ target: { value: 'Health and Fitness' } })}>Health &</h1>
+              <h1 className={styles.newfit}onClick={() => handleCategory({ target: { value: 'Health and Fitness' } })} >Fitness</h1>
+              </div>
+
+              <div className={styles.newidv} >
               <img src={World} className={styles.travel} alt="Travel" onClick={() => handleCategory({ target: { value: 'Travel' } })} />
+              <h1 className={styles.newtravel} onClick={() => handleCategory({ target: { value: 'Travel' } })} >Travel</h1>
+              </div>
+
+              <div className={styles.newidv} >
               <img src={Fruits} className={styles.food} alt="Food" onClick={() => handleCategory({ target: { value: 'Food' } })} />
+              <h1 className={styles.newfood} onClick={() => handleCategory({ target: { value: 'Food' } })}>Food</h1>
+              </div>
+
+              <div className={styles.newidv} >
               <img src={Education} className={styles.education} alt="Education" onClick={() => handleCategory({ target: { value: 'Education' } })} />
+              <h1 className={styles.newedu} onClick={() => handleCategory({ target: { value: 'Education' } })}>Education</h1>
+              </div>
+              
+              <div className={styles.newidv} >
               <img src={India} className={styles.movie} alt="Movie" onClick={() => handleCategory({ target: { value: 'Movie' } })} />
+              <h1 className={styles.newmov} onClick={() => handleCategory({ target: { value: 'Movie' } })}>Movie</h1>
+              </div>
             </div>
           </div>
 
@@ -423,7 +432,7 @@ function Home() {
                         </div>
 
 
-                        {isTokenPresent && (
+                        {isTokenPresent &&  name === data.username && (
                           <div className={styles.editContainer} onClick={() => {
                             navigate("/edit", {
                               state: {

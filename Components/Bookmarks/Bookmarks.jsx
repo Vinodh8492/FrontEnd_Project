@@ -91,7 +91,7 @@ function Bookmarks({ savedSlides, setSavedSlides, toggleSlide, selectedSlide, se
   }, []);
 
   if (savedSlides.length === 0) {
-    return <div>No saved slides.</div>;
+    return <div className={styles.no} >No saved slides.</div>;
   }
 
   return (

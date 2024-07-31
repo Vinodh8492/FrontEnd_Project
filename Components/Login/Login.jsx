@@ -37,10 +37,11 @@ function Login() {
                 console.log("Name :", response.name);
                 alert(response.message);
 
+
             } else {
                
-                console.error("Token not received in the response:", response);
-                setMessage("Token not received in the response");
+                console.error("Invalid Credentials:", response);
+                setMessage("Invalid Credentials");
             }
         } catch (error) {
            
