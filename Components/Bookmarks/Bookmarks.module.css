@@ -1,99 +1,499 @@
 .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  padding-left: 2vw;
+  width: 100vw;
+}
+
+.bookmarksContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5vw;
+  margin-left: 3vw;
+  flex-wrap: wrap;
+}
+
+.rightArrow {
+  width: 2vw;
+  padding-left: 1vw;
+  cursor: pointer;
+}
+
+.leftArrow {
+  width: 3.8vw;
+  cursor: pointer;
+}
+
+.bottomIcons {
+  padding-top: 5vh;
+}
+
+.storyDetails {
+  margin-top: 21vh;
+  padding-top: 0;
+}
+
+.storyTitle {
+  color: white;
+  margin-bottom: 0;
+  margin-left: 1.5vw;
+}
+
+.storyDescription {
+  color: white;
+  margin-top: 0;
+  margin-left: 1.5vw;
+}
+
+.no {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vw;
+  margin-left: 8vw;
+}
+
+.required {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.categoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5vw;
+  max-width: 100vw;
+}
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  width: 22vw;
+  height: 15vh;
+
+}
+
+.storyImage {
+  display: block;
+  width: 100%;
+  height: 35vh;
+}
+
+.imageWrapper {
+  position: relative;
+  background-color: black;
+  padding-bottom: 25px;
+  border-radius: 5px;
+
+}
+
+.photos {
+  width: 38vw;
+  height: 42vh;
+}
+
+.textOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.heading {
+  margin: 0;
+  color: white;
+
+}
+
+.description {
+  margin: 5px 0;
+  color: white;
+}
+
+.save {
+  position: fixed;
+  left: 5vw;
+  width: 2vw;
+  height: 75px;
+  margin-left: 30vw;
+  margin-top: -12vh;
+  padding-top: 3vh;
+  cursor: pointer;
+
+}
+
+.like {
+  position: fixed;
+  right: 5vw;
+  width: 2.5vw;
+  height: 75px;
+  margin-right: 28.5vw;
+  margin-top: -10.5vh;
+  padding-top: 1vh;
+  cursor: pointer;
+}
+
+
+.share {
+  position: fixed;
+  top: 15vh;
+  right: 33vw;
+  width: 2vw;
+  height: auto;
+  margin-left: 1vw;
+  cursor: pointer;
+}
+
+.cancel {
+  position: fixed;
+  top: 16vh;
+  left: 34vw;
+  width: 1.5vw;
+  height: auto;
+  cursor: pointer;
+}
+
+.Edit {
+  margin-left: 8vw;
+  margin-top: -2vh;
+  position: relative;
+  cursor: pointer;
+}
+
+.edit {
+  cursor: pointer;
+  position: relative;
+  margin-left: 16vw;
+  margin-bottom: 1vh;
+
+}
+
+.editText {
+  font-size: large;
+  padding-left: 0.3vw;
+  margin-bottom: 10vh;
+  position: fixed;
+
+}
+
+.req {
+  color: black;
+  text-align: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.selectedSlideOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectedSlideContent {
+  background-color: black;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  color: white;
+}
+
+.title {
+  margin-right: 50vw;
+  padding-left: 3vw;
+}
+
+.header {
+  display: flex;
+  gap: 2vw;
+  width: 100vw;
+  margin-bottom: 3vh;
+}
+
+.btn1 {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 2vw;
+  color: white;
+  border: none;
+  background-color: #ff7373;
+  margin-top: 2.5vh;
+}
+
+.btn2 {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 2vw;
+  border: none;
+  color: white;
+  background-color: #73abff;
+  margin-top: 2.5vh;
+}
+
+.see {
+  margin-left: 47vw;
+  width: 7vw;
+  height: 4vh;
+  color: white;
+  background-color: #ff7373;
+  border-radius: 1vw;
+  border: none;
+}
+
+
+.slidehead {
+  color: white;
+  font-size: 27px;
+  margin-bottom: 0;
+  margin-left: 2vw;
+}
+
+.slidedescription {
+  color: white;
+  font-size: 18px;
+  margin-top: 0;
+  margin-left: 2vw;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlayContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: 0vw;
+  border-radius: 2vw;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 1000;
+
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+
+}
+
+.cut {
+  margin-left: 50vw;
+  position: fixed;
+  margin-top: -50vh;
+}
+
+.cut2 {
+  margin-left: 50vw;
+  position: absolute;
+  margin-top: -50vh;
+}
+
+.img {
+  margin-bottom: 5vh;
+}
+
+.about {
+  margin-bottom: 5vh;
+  margin-top: 4vh;
+
+}
+
+.register {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 2vw;
+  color: white;
+  border: none;
+  background-color: #ff7373;
+  margin-top: 2.5vh;
+  margin-left: 10vw;
+}
+
+.sign {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 2vw;
+  border: none;
+  color: white;
+  background-color: #73abff;
+  margin-top: 2.5vh;
+}
+
+.profile {
+  position: relative;
+  display: inline-block;
+
+}
+
+.profileOverlay {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 18vh;
+  position: absolute;
+  margin-top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 0.5vw;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.logoutButton {
+  background-color: #ff6961;
+  color: #fff;
+  border: none;
+  margin-top: 2vh;
+  border-radius: 1vw;
+  cursor: pointer;
+  width: 10vw;
+  margin-left: 3vw;
+  height: 6vh;
+  cursor: pointer;
+
+}
+
+.name {
+  color: black;
+  margin-left: 5vw;
+  margin-top: 2vh;
+  font-size: 35px;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .images {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 5vw;
     padding-left: 2vw;
     width: 100vw;
   }
 
-  .bookmarksContainer{
+
+
+  .bookmarksContainer {
     display: flex;
-    flex-direction: row;
-    gap: 2.5vw;
+    flex-direction: column;
+    gap: 5vw;
     margin-left: 3vw;
     flex-wrap: wrap;
+    margin-right: 3vw;
   }
 
-  .rightArrow{
-    width: 2vw;
-    padding-left: 1vw;
-    cursor: pointer;
-  }
-  
-  .leftArrow{
-    width: 3.8vw;
-    cursor: pointer;
+  .rightArrow {
+    width: 5.5vw;
+    padding-left: 3vw;
+    margin-top: -1vh;
   }
 
-  .bottomIcons{
-    padding-top: 5vh;
+  .leftArrow {
+    width: 10vw;
   }
-  
-  .storyDetails{
+
+
+  .bottomIcons {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .storyDetails {
     margin-top: 21vh;
-    padding-top: 0;
+    margin-bottom: 0;
   }
-  
-  .storyTitle{
+
+  .storyTitle {
     color: white;
     margin-bottom: 0;
-    margin-left: 1.5vw;
-  }
-  
-  .storyDescription{
-    color: white;
-    margin-top: 0;
-    margin-left: 1.5vw;
+    margin-left: 5vw;
+    font-size: 20px;
   }
 
-  .no{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5vw;
-    margin-left: 8vw;
+  .storyDescription {
+    color: white;
+    margin-top: 0;
+    margin-left: 5vw;
+    font-size: 15px;
   }
-  
+
+
   .required {
     display: flex;
     flex-direction: column;
     gap: 3vh;
   }
-  
+
   .categoryContainer {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 3.5vw;
-    max-width: 100vw; 
+    max-width: 100vw;
   }
-  
+
   .imageContainer {
     position: relative;
     display: inline-block;
-    width: 22vw;
+    width: 90vw;
     height: 15vh;
-    
+
   }
-  
+
   .storyImage {
     display: block;
     width: 100%;
     height: 35vh;
   }
-  
+
   .imageWrapper {
     position: relative;
     background-color: black;
     padding-bottom: 25px;
     border-radius: 5px;
-    
+
   }
-  
-  .photos{
-    width: 38vw;
-    height: 42vh;
+
+
+  .photos {
+    width: 75vw;
+    height: 50vh;
+    padding-left: 0;
+    margin-left: 0;
+    padding-right: 0;
+    margin-right: 0;
   }
-  
+
   .textOverlay {
     position: absolute;
     bottom: 0;
@@ -102,126 +502,132 @@
     padding: 10px;
     margin-bottom: 50px;
   }
-  
+
   .heading {
     margin: 0;
     color: white;
-  
+
   }
-  
+
   .description {
     margin: 5px 0;
     color: white;
   }
-  
+
   .save {
     position: fixed;
     left: 5vw;
-    width: 2vw;
+    width: 5vw;
     height: 75px;
-    margin-left: 30vw;
-    margin-top: -12vh;
+    margin-left: 15vw;
+    margin-top: -13.5vh;
     padding-top: 3vh;
-    cursor: pointer;
-    
+
   }
-  
+
+
+
   .like {
     position: fixed;
     right: 5vw;
-    width: 2.5vw;
+    width: 8vw;
     height: 75px;
-    margin-right: 28.5vw;
-    margin-top: -10.5vh;
+    margin-right: 15vw;
+    margin-top: -12vh;
     padding-top: 1vh;
-    cursor: pointer;
   }
-  
+
+
+
   .share {
     position: fixed;
     top: 15vh;
     right: 33vw;
-    width: 2vw;
+    width: 6vw;
     height: auto;
-    margin-left: 1vw;
-    cursor: pointer;
+    margin-right: -12vw;
+    margin-top: 0vh;
   }
-  
+
   .cancel {
     position: fixed;
     top: 16vh;
     left: 34vw;
-    width: 1.5vw;
+    width: 4.5vw;
     height: auto;
-    cursor: pointer;
+    margin-top: 0vh;
+    margin-left: -8vh;
+
   }
-  
-  .Edit{
-    margin-left: 8vw;
-    margin-top: -2vh;
+
+  .Edit {
+    margin-left: 35vw;
+    margin-top: -3.5vh;
     position: relative;
-    cursor: pointer;
+
   }
-  
+
   .edit {
-   cursor: pointer;
+
     position: relative;
-    margin-left: 16vw;
+    margin-left: 28vw;
     margin-bottom: 1vh;
-    
+    width: 20vw;
+
   }
-  
-  .editText{
+
+  .editText {
     font-size: large;
-    padding-left:0.3vw;
-   margin-bottom: 10vh;
+    padding-left: 0.3vw;
+    margin-bottom: 10vh;
     position: fixed;
-   
+
   }
-  
+
   .req {
     color: black;
     text-align: center;
     padding-top: 2vh;
     padding-bottom: 2vh;
   }
-  
+
   .selectedSlideOverlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 9999; 
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .selectedSlideContent {
     background-color: black;
-    padding-top: 70px;
-    padding-bottom: 30px;
+    padding-top: 10vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
     border-radius: 10px;
-    max-width: 80%;
-    max-height: 80%;
     overflow: auto;
     color: white;
+    height: 70vh;
+    width: 75vw;
   }
-  
+
   .title {
     margin-right: 50vw;
     padding-left: 3vw;
   }
-  
+
   .header {
     display: flex;
     gap: 2vw;
     width: 100vw;
     margin-bottom: 3vh;
   }
-  
+
   .btn1 {
     width: 10vw;
     height: 5vh;
@@ -231,7 +637,7 @@
     background-color: #ff7373;
     margin-top: 2.5vh;
   }
-  
+
   .btn2 {
     width: 10vw;
     height: 5vh;
@@ -241,8 +647,8 @@
     background-color: #73abff;
     margin-top: 2.5vh;
   }
-  
-  .see{
+
+  .see {
     margin-left: 47vw;
     width: 7vw;
     height: 4vh;
@@ -251,23 +657,24 @@
     border-radius: 1vw;
     border: none;
   }
-  
-  
-  .slidehead{
+
+
+  .slidehead {
     color: white;
-    font-size: 27px;
+    font-size: 20px;
     margin-bottom: 0;
-    margin-left: 2vw;
+    margin-left: 5vw;
+    margin-top: 0vh;
   }
-  
-  .slidedescription{
+
+  .slidedescription {
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 0;
-    margin-left: 2vw;
+    margin-left: 5vw;
   }
-  
-  
+
+
   .overlay {
     position: fixed;
     top: 0;
@@ -277,7 +684,7 @@
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.7);
   }
-  
+
   .overlayContent {
     position: fixed;
     top: 50%;
@@ -290,40 +697,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white; 
-    z-index: 1000; 
-    
+    background-color: white;
+    z-index: 1000;
+
   }
-  
-  .body{
+
+  .body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-   
+
   }
-  
-  .cut{
+
+  .cut {
     margin-left: 50vw;
     position: fixed;
     margin-top: -50vh;
   }
-  
-  .cut2{
+
+  .cut2 {
     margin-left: 50vw;
     position: absolute;
     margin-top: -50vh;
   }
-  
-  .img{
+
+  .img {
     margin-bottom: 5vh;
   }
-  
-  .about{
+
+  .about {
     margin-bottom: 5vh;
     margin-top: 4vh;
-    
+
   }
-  
+
+
   .register {
     width: 10vw;
     height: 5vh;
@@ -334,8 +742,8 @@
     margin-top: 2.5vh;
     margin-left: 10vw;
   }
-  
-  .sign{
+
+  .sign {
     width: 10vw;
     height: 5vh;
     border-radius: 2vw;
@@ -344,13 +752,13 @@
     background-color: #73abff;
     margin-top: 2.5vh;
   }
-  
+
   .profile {
     position: relative;
     display: inline-block;
-  
+
   }
-  
+
   .profileOverlay {
     display: flex;
     flex-direction: column;
@@ -364,9 +772,9 @@
     border-radius: 0.5vw;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    
+
   }
-  
+
   .logoutButton {
     background-color: #ff6961;
     color: #fff;
@@ -377,419 +785,13 @@
     width: 10vw;
     margin-left: 3vw;
     height: 6vh;
-    cursor: pointer;
-    
+
   }
-  
-  .name{
+
+  .name {
     color: black;
     margin-left: 5vw;
     margin-top: 2vh;
     font-size: 35px;
   }
-
-
-
-
-  
-  @media only screen and (max-width: 600px){
-    .images {
-      display: flex;
-      flex-wrap: wrap; 
-      gap: 5vw;
-      padding-left: 2vw;
-      width: 100vw;
-    }
-
-    
-  
-    .bookmarksContainer{
-      display: flex;
-      flex-direction: column;
-      gap: 5vw;
-      margin-left: 3vw;
-      flex-wrap: wrap;
-      margin-right: 3vw;
-    }
-    .rightArrow{
-      width: 5.5vw;
-      padding-left: 3vw;
-      margin-top: -1vh;
-    }
-    
-    .leftArrow{
-      width: 10vw;
-    }
-  
-    
-    .bottomIcons{
-      padding: 0;
-      margin-top: 0;
-    }
-    
-    .storyDetails{
-      margin-top: 21vh;
-      margin-bottom: 0;
-    }
-    
-    .storyTitle{
-      color: white;
-      margin-bottom: 0;
-      margin-left: 5vw;
-      font-size: 20px;
-    }
-    
-    .storyDescription{
-      color: white;
-      margin-top: 0;
-      margin-left: 5vw;
-      font-size: 15px;
-    }
-    
-    
-    .required {
-      display: flex;
-      flex-direction: column;
-      gap: 3vh;
-    }
-    
-    .categoryContainer {
-      display: flex;
-      flex-wrap: wrap; 
-      gap: 3.5vw;
-      max-width: 100vw; 
-    }
-    
-    .imageContainer {
-      position: relative;
-      display: inline-block;
-      width: 90vw;
-      height: 15vh;
-      
-    }
-    
-    .storyImage {
-      display: block;
-      width: 100%;
-      height: 35vh;
-    }
-    
-    .imageWrapper {
-      position: relative;
-      background-color: black;
-      padding-bottom: 25px;
-      border-radius: 5px;
-      
-    }
-    
-    
-    .photos{
-      width: 75vw;
-      height: 50vh;
-      padding-left: 0;
-      margin-left: 0;
-      padding-right: 0;
-      margin-right: 0;
-    }
-    
-    .textOverlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 50px;
-    }
-    
-    .heading {
-      margin: 0;
-      color: white;
-    
-    }
-    
-    .description {
-      margin: 5px 0;
-      color: white;
-    }
-    
-    .save {
-      position: fixed;
-      left: 5vw;
-      width: 5vw;
-      height: 75px;
-      margin-left: 15vw;
-      margin-top: -13.5vh;
-      padding-top: 3vh;
-      
-    }
-    
-    
-    
-    .like {
-      position: fixed;
-      right: 5vw;
-      width: 8vw;
-      height: 75px;
-      margin-right: 15vw;
-      margin-top: -12vh;
-      padding-top: 1vh;
-    }
-    
-    
-    
-    .share {
-      position: fixed;
-      top: 15vh;
-      right: 33vw;
-      width: 6vw;
-      height: auto;
-      margin-right: -12vw;
-      margin-top: 0vh;
-    }
-    
-    .cancel {
-      position: fixed;
-      top: 16vh;
-      left: 34vw;
-      width: 4.5vw;
-      height: auto;
-      margin-top: 0vh;
-      margin-left: -8vh;
-      
-    }
-    
-    .Edit{
-      margin-left: 35vw;
-      margin-top: -3.5vh;
-      position: relative; /* Ensure the position is relative */
-     
-    }
-    
-    .edit {
- 
-      position: relative;
-      margin-left: 28vw;
-      margin-bottom: 1vh;
-      width: 20vw;
-      
-    }
-    .editText{
-      font-size: large;
-      padding-left:0.3vw;
-     margin-bottom: 10vh;
-      position: fixed;
-     
-    }
-    
-    .req {
-      color: black;
-      text-align: center;
-      padding-top: 2vh;
-      padding-bottom: 2vh;
-    }
-    
-    .selectedSlideOverlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.7); 
-      z-index: 9999; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .selectedSlideContent {
-      background-color: black;
-      padding-top: 10vh;
-      padding-bottom: 0;
-      margin-bottom: 0;
-      border-radius: 10px;
-      overflow: auto;
-      color: white;
-      height: 70vh;
-      width: 75vw;
-    }
-    
-    .title {
-      margin-right: 50vw;
-      padding-left: 3vw;
-    }
-    
-    .header {
-      display: flex;
-      gap: 2vw;
-      width: 100vw;
-      margin-bottom: 3vh;
-    }
-    
-    .btn1 {
-      width: 10vw;
-      height: 5vh;
-      border-radius: 2vw;
-      color: white;
-      border: none;
-      background-color: #ff7373;
-      margin-top: 2.5vh;
-    }
-    
-    .btn2 {
-      width: 10vw;
-      height: 5vh;
-      border-radius: 2vw;
-      border: none;
-      color: white;
-      background-color: #73abff;
-      margin-top: 2.5vh;
-    }
-    
-    .see{
-      margin-left: 47vw;
-      width: 7vw;
-      height: 4vh;
-      color: white;
-      background-color: #ff7373;
-      border-radius: 1vw;
-      border: none;
-    }
-    
-    
-    .slidehead{
-      color: white;
-      font-size: 20px;
-      margin-bottom: 0;
-      margin-left: 5vw;
-      margin-top: 0vh;
-    }
-    
-    .slidedescription{
-      color: white;
-      font-size: 15px;
-      margin-top: 0;
-      margin-left: 5vw;
-    }
-    
-    
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 999;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-    
-    .overlayContent {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      margin-left: 0vw;
-      border-radius: 2vw;
-      transform: translate(-50%, -50%);
-      width: 70%;
-      height: 75%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: white; 
-      z-index: 1000; 
-      
-    }
-    
-    .body{
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-     
-    }
-    
-    .cut{
-      margin-left: 50vw;
-      position: fixed;
-      margin-top: -50vh;
-    }
-    
-    .cut2{
-      margin-left: 50vw;
-      position: absolute;
-      margin-top: -50vh;
-    }
-    
-    .img{
-      margin-bottom: 5vh;
-    }
-    
-    .about{
-      margin-bottom: 5vh;
-      margin-top: 4vh;
-      
-    }
-    
-    
-    .register {
-      width: 10vw;
-      height: 5vh;
-      border-radius: 2vw;
-      color: white;
-      border: none;
-      background-color: #ff7373;
-      margin-top: 2.5vh;
-      margin-left: 10vw;
-    }
-    
-    .sign{
-      width: 10vw;
-      height: 5vh;
-      border-radius: 2vw;
-      border: none;
-      color: white;
-      background-color: #73abff;
-      margin-top: 2.5vh;
-    }
-    
-    .profile {
-      position: relative;
-      display: inline-block;
-    
-    }
-    
-    .profileOverlay {
-      display: flex;
-      flex-direction: column;
-      width: 25vw;
-      height: 18vh;
-      position: absolute;
-      margin-top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: white;
-      border-radius: 0.5vw;
-      padding: 20px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      
-    }
-    
-    .logoutButton {
-      background-color: #ff6961;
-      color: #fff;
-      border: none;
-      margin-top: 2vh;
-      border-radius: 1vw;
-      cursor: pointer;
-      width: 10vw;
-      margin-left: 3vw;
-      height: 6vh;
-      
-    }
-    
-    .name{
-      color: black;
-      margin-left: 5vw;
-      margin-top: 2vh;
-      font-size: 35px;
-    }
-  }
-  
+}

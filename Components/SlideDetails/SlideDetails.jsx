@@ -19,7 +19,6 @@ function SlideDetails() {
       });
   }, [id]);
 
-
   return (
     <div>
       {slideData ? (

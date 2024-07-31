@@ -7,11 +7,25 @@ import Edited from '../../Assets/Edited.svg';
 import Saved from '../../Assets/Saved.svg';
 import Save from '../../Assets/Save.svg';
 import Like from '../../Assets/Like.svg';
+import Liked from '../../Assets/Liked.svg'
 import Share from '../../Assets/Share.svg';
+import { likeSlide, removeLike } from '../../Apis/likedSlides';
 
-function Bookmarks({ savedSlides, setSavedSlides, toggleSlide, selectedSlide, setSelectedSlide, Story, navigate, handleShare }) {
+function Bookmarks({
+  savedSlides,
+  setSavedSlides,
+  toggleSlide,
+  selectedSlide,
+  setSelectedSlide,
+  Story,
+  navigate,
+  handleShare,
+  toggleLike,
+  setLikedSlides,
+  likedSlides }) {
   const [bookmarkIcons, setBookmarkIcons] = useState({});
 
+  const name = localStorage.getItem('name')
 
   const initializeBookmarkIcons = () => {
     const icons = {};
@@ -21,25 +35,40 @@ function Bookmarks({ savedSlides, setSavedSlides, toggleSlide, selectedSlide, se
     setBookmarkIcons(icons);
   };
 
+  if (!localStorage.getItem('name')) {
+    localStorage.clear()
+  }
+
 
   const handleToggleSave = (slideId) => {
-
     const isAlreadySaved = savedSlides.includes(slideId);
-
     if (isAlreadySaved) {
-
       const updatedSavedSlides = savedSlides.filter(id => id !== slideId);
       setSavedSlides(updatedSavedSlides);
       setBookmarkIcons({ ...bookmarkIcons, [slideId]: Save });
     } else {
-
       setSavedSlides([...savedSlides, slideId]);
       setBookmarkIcons({ ...bookmarkIcons, [slideId]: Saved });
     }
   };
 
-  useEffect(() => {
+  const handleToggleLike = async (slideId) => {
+    const username = localStorage.getItem('name')
+    try {
+      if (likedSlides.includes(slideId)) {
+        const result = await removeLike(username, slideId);
+        setLikedSlides(likedSlides.filter(id => id !== slideId));
+      } else {
+        const result1 = await likeSlide(username, slideId);
+        setLikedSlides([...likedSlides, slideId]);
+      }
+    } catch (error) {
+      console.error('Error liking/removing slide:', error);
+      alert('Failed to like/unlike slide. Please try again.');
+    }
+  }
 
+  useEffect(() => {
     localStorage.setItem('bookmarkIcons', JSON.stringify(bookmarkIcons));
   }, [bookmarkIcons]);
 
@@ -56,7 +85,6 @@ function Bookmarks({ savedSlides, setSavedSlides, toggleSlide, selectedSlide, se
   const handleGoToPreviousSlide = () => {
     const currentIndex = savedSlides.findIndex(id => id === selectedSlide);
     const prevIndex = (currentIndex - 1 + savedSlides.length) % savedSlides.length;
-
     setSelectedSlide(savedSlides[prevIndex]);
   };
 
@@ -81,10 +109,6 @@ function Bookmarks({ savedSlides, setSavedSlides, toggleSlide, selectedSlide, se
     });
   };
 
-  const handleToggleLike = (slideId) => {
-
-  };
-
 
   useEffect(() => {
     initializeBookmarkIcons();
@@ -104,16 +128,19 @@ function Bookmarks({ savedSlides, setSavedSlides, toggleSlide, selectedSlide, se
               if (story._id === selectedSlide) {
                 return (
                   <>
+
                     <img className={styles.photos} src={story.Image} alt="Selected Story Image" />
                     <h2 className={styles.slidehead}>{story.Heading}</h2>
                     <p className={styles.slidedescription}>{story.Description}</p>
                     <div className={styles.bottomIcons}>
-                      <div className={styles.editContainer}>
-                        <img src={Edited} onClick={() => handleEdit(selectedSlide)} className={styles.edit} />
-                      </div>
+                      {story.username === name && (
+                        <div className={styles.editContainer}>
+                          <img src={Edited} onClick={() => handleEdit(selectedSlide)} className={styles.edit} />
+                        </div>
+                      )}
                       <img src={Cancel} className={styles.cancel} onClick={handleCancelSlide} />
                       <img src={bookmarkIcons[selectedSlide]} className={styles.save} onClick={() => handleToggleSave(selectedSlide)} />
-                      <img src={Like} className={styles.like} onClick={() => handleToggleLike(selectedSlide)} />
+                      <img src={likedSlides.includes(selectedSlide) ? Liked : Like} className={styles.like} onClick={() => handleToggleLike(selectedSlide)} />
                       <img src={Share} className={styles.share} onClick={handleShare} />
                     </div>
                   </>
@@ -147,13 +174,15 @@ function Bookmarks({ savedSlides, setSavedSlides, toggleSlide, selectedSlide, se
                         <p className={styles.storyDescription}>{slide.Description}</p>
                       </div>
                     </div>
-                    <div className={styles.editContainer} onClick={() => handleEdit(slideId)}>
-                      <img src={Edited} className={styles.Edit} />
-                    </div>
+                    {slide.username === name && (
+                      <div className={styles.editContainer} onClick={() => handleEdit(slideId)}>
+                        <img src={Edited} className={styles.Edit} />
+                      </div>
+                    )}
                     {selectedSlide && (
                       <div className={styles.bottomIcons}>
                         <img src={bookmarkIcons[slideId]} className={styles.save} onClick={() => handleToggleSave(slideId)} />
-                        <img src={Like} className={styles.like} onClick={() => handleToggleLike(slideId)} />
+                        <img src={likedSlides.includes(slideId) ? Liked : Like} className={styles.like} onClick={() => handleToggleLike(slideId)} />
                         <img src={Share} className={styles.share} onClick={handleShare} />
                       </div>
                     )}

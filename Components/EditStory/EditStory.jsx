@@ -6,8 +6,6 @@ import { DEFAULT_CATEGORIES } from '../../utils/constants';
 
 function EditStory() {
 
-  const name = localStorage.getItem('name')
-
 
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -17,13 +15,15 @@ function EditStory() {
     Description: '' || stateData?.Description,
     Image: '' || stateData?.Image,
     Category: stateData?.Category || [],
-    username : stateData?.username || name
+    username: stateData?.username || name
   });
 
-
+  const name = localStorage.getItem('name')
+  if (!name) {
+    navigate('/')
+  }
 
   const handleChange = (event) => {
-
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
@@ -38,12 +38,9 @@ function EditStory() {
       alert('Please fill in all fields.');
       return;
     }
-
     if (state?.edit) {
       await editStory(state.Story._id, formData);
-
     }
-
     alert('Story updated successfully')
     navigate('/');
   };

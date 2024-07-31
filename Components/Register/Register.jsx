@@ -3,12 +3,12 @@ import styles from './Register.module.css';
 import { registerUser } from '../../Apis/user';
 import eyeClosed from '../../Assets/EyeClose.png';
 import eyeOpen from '../../Assets/EyeOpen.jpeg';
-import Cut from '../../Assets/Cut.svg'
 
 
-function Login() {
+function Register() {
     const [formData, setFormData] = useState({ Username: '', Password: '' });
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const [message, setMessage] = useState('');
 
     const handleChange = (e) => {
         setFormData({
@@ -23,13 +23,16 @@ function Login() {
 
     const handleSubmit = async () => {
         if (!formData.Password || !formData.Username) {
-            alert("Fields can't be empty");
+            setMessage("Fields can't be empty");
             return;
         }
 
         const response = await registerUser({ ...formData });
-        alert(response.message);
-
+        if (response.message == "Username already exists, try another") {
+            return setMessage(response.message)
+        }
+        alert(response.message)
+        setFormData({ Username: '', Password: '' })
     };
 
     return (
@@ -68,6 +71,7 @@ function Login() {
                 </div>
                 <br />
             </form>
+            {message && <div className={styles.message}>{message}</div>}
             <div className={styles.container} >
                 <button className={styles.button} onClick={handleSubmit}>Register</button>
             </div>
@@ -75,4 +79,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;

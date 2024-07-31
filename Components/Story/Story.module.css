@@ -1,49 +1,42 @@
-.header{
+.header {
     display: flex;
     flex-direction: row;
     gap: 2vw;
 }
 
-.p1{
+.p1 {
     display: flex;
     flex-direction: row;
     gap: 7vw;
-   
-    
 }
 
-.topper{
+.topper {
     margin-left: 40vw;
 }
 
-.p2{
+.p2 {
     display: flex;
     flex-direction: row;
     gap: 5vw;
-   
 }
 
-.p3{
+.p3 {
     display: flex;
     flex-direction: row;
     gap: 9vw;
-
 }
 
-.p4{
+.p4 {
     display: flex;
     flex-direction: row;
     gap: 6.5vw;
-   
-    
 }
 
-.form{
+.form {
     display: flex;
     flex-direction: column;
     gap: 0.5vh;
     margin-left: -20vw;
-   
 }
 
 .activeSlideButton {
@@ -54,10 +47,10 @@
     border-radius: 5px;
     padding: 5px 10px;
     margin-right: 10px;
-    width:5;
-  }
+    width: 5;
+}
 
-  .slideButton {
+.slideButton {
     cursor: pointer;
     background-color: white;
     color: black;
@@ -66,17 +59,17 @@
     padding: 5px 10px;
     margin-right: 10px;
     width: 5vw;
-  }
+}
 
 
-.headinginput{
+.headinginput {
     width: 25vw;
     height: 5vh;
     margin-top: 3vh;
     margin-left: 3vw;
 }
 
-.descriptioninput{
+.descriptioninput {
     width: 25vw;
     height: 12vh;
     margin-top: 3vh;
@@ -84,14 +77,14 @@
     overflow-wrap: break-word;
 }
 
-.imageinput{
+.imageinput {
     width: 25vw;
     height: 5vh;
     margin-top: 3vh;
     margin-left: 3vw;
 }
 
-.categoryinput{
+.categoryinput {
     width: 26vw;
     height: 5vh;
     margin-top: 3vh;
@@ -99,25 +92,24 @@
     cursor: pointer;
 }
 
-.head{
+.head {
     display: flex;
     flex-direction: row;
     gap: 2.5vw;
     margin-left: -5vw;
-   
 }
 
-.add{
+.add {
     width: 5vw;
     height: 6vh;
     cursor: pointer;
 }
 
-.heading{
+.heading {
     margin-left: 15vw;
 }
 
-.previous{
+.previous {
     width: 10vw;
     height: 6.5vh;
     margin-left: -2vw;
@@ -128,7 +120,7 @@
     cursor: pointer;
 }
 
-.next{
+.next {
     width: 10vw;
     height: 6.5vh;
     border-radius: 2vw;
@@ -138,7 +130,7 @@
     cursor: pointer;
 }
 
-.post{
+.post {
     width: 10vw;
     height: 6.5vh;
     border-radius: 2vw;
@@ -149,69 +141,61 @@
     cursor: pointer;
 }
 
-.last{
+.last {
     margin-top: 3vh;
     display: flex;
     flex-direction: row;
     gap: 3vw;
-   
+
 }
 
 
-
-@media only screen and (max-width: 600px){
-    .header{
+@media only screen and (max-width: 600px) {
+    .header {
         display: flex;
         flex-direction: row;
         gap: 2vw;
     }
-    
-  
-    .p1{
+
+
+    .p1 {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         padding-top: 4vh;
     }
-    
-    .p2{
+
+    .p2 {
         display: flex;
         flex-direction: column;
-    }
-    
-    .p3{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .p4{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .form{
-        display: flex;
-        flex-direction: column;
-       
-        margin-left: -20vw;
-       
     }
 
-   
-    
+    .p3 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .p4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-left: -20vw;
+    }
+
     .activeSlideButton {
-        
         background-color: #fff;
         color: #007bff;
         border: 2px solid #007bff;
         border-radius: 5px;
         margin-right: 5px;
-        width:15vw;
+        width: 15vw;
         margin-left: 20vw;
-       
-      }
-    
-      .slideButton {
-       
+    }
+
+    .slideButton {
         background-color: white;
         color: black;
         border-color: none;
@@ -219,34 +203,30 @@
         margin-right: 5px;
         width: 15vw;
         margin-left: 20vw;
-        
-      }
-    
-    
-   
-    
-    .descriptioninput{
+    }
+
+    .descriptioninput {
         width: 40vw;
         height: 5vh;
         margin-left: 50vw;
         margin-top: -5vh;
     }
-    
-    .imageinput{
+
+    .imageinput {
         width: 40vw;
         height: 5vh;
         margin-left: 50vw;
         margin-top: -5vh;
     }
-    
-    .categoryinput{
+
+    .categoryinput {
         width: 40vw;
         height: 5vh;
         margin-left: 50vw;
         margin-top: -5vh;
     }
-    
-    .head{
+
+    .head {
         display: flex;
         flex-direction: column;
         gap: 2.5vw;
@@ -254,27 +234,26 @@
         position: fixed;
         margin-top: 5vh;
     }
-    
-    .add{
+
+    .add {
         width: 14vw;
         height: 6vh;
         margin-left: 20vw;
-        
     }
-    
-    .heading{
+
+    .heading {
         margin-left: 50vw;
         font-size: 15px;
     }
-    .headinginput{
+
+    .headinginput {
         width: 25vw;
         height: 5vh;
         margin-left: -24vw;
-       margin-top: 5vh;
-       
+        margin-top: 5vh;
     }
-    
-    .previous{
+
+    .previous {
         width: 15vw;
         height: 6.5vh;
         margin-left: 12vw;
@@ -284,8 +263,8 @@
         background-color: #7EFF73;
         color: white;
     }
-    
-    .next{
+
+    .next {
         width: 15vw;
         height: 6.5vh;
         border-radius: 2vw;
@@ -294,8 +273,8 @@
         background-color: #73ABFF;
         color: white;
     }
-    
-    .post{
+
+    .post {
         width: 15vw;
         height: 6vh;
         border-radius: 2vw;
@@ -304,14 +283,12 @@
         border: none;
         background-color: #FF7373;
         color: white;
-       
     }
-    
-    .last{
+
+    .last {
         margin-top: 3vh;
         display: flex;
         flex-direction: row;
         gap: 3vw;
-       
     }
 }

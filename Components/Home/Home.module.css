@@ -1,29 +1,33 @@
-
 .images {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 2vw;
   padding-left: 2vw;
   width: 100vw;
 }
 
-.rightArrow{
+.rightArrow {
   width: 2vw;
   padding-left: 1vw;
   cursor: pointer;
 }
 
-.all, .health, .travel, .food, .movie, .education{
+.all,
+.health,
+.travel,
+.food,
+.movie,
+.education {
   width: 15vw;
   height: 30vh;
   cursor: pointer;
 }
 
-.newdiv{
+.newdiv {
   position: relative;
 }
 
-.newall{
+.newall {
   color: white;
   position: absolute;
   margin-top: -20vh;
@@ -32,63 +36,66 @@
   cursor: pointer;
 }
 
-.newtravel, .newfood, .newmov{
+.newtravel,
+.newfood,
+.newmov {
   color: white;
   position: absolute;
   margin-top: -19vh;
-  margin-left: 4vw;cursor: pointer;
+  margin-left: 4vw;
+  cursor: pointer;
 }
 
-.newedu{
+.newedu {
   color: white;
   position: absolute;
   margin-top: -19vh;
-  margin-left: 3vw;cursor: pointer;
+  margin-left: 3vw;
+  cursor: pointer;
 }
 
-.newhealth, .newfit{
+.newhealth,
+.newfit {
   color: white;
   position: absolute;
-cursor: pointer;
+  cursor: pointer;
 }
 
-.newhealth{
+.newhealth {
   margin-top: -22vh;
   margin-left: 4vw;
 }
 
-.newfit{
+.newfit {
   margin-top: -17vh;
   margin-left: 4vw;
 }
 
-
-.leftArrow{
+.leftArrow {
   width: 3.8vw;
   cursor: pointer;
 }
 
-.bottomIcons{
+.bottomIcons {
   padding-top: 5vh;
 }
 
-.storyDetails{
+.storyDetails {
   margin-top: 21vh;
   padding-top: 0;
 }
 
-.storyTitle{
+.storyTitle {
   color: white;
   margin-bottom: 0;
   margin-left: 1.5vw;
 }
 
-.storyDescription{
+.storyDescription {
   color: white;
   margin-top: 0;
   margin-left: 1.5vw;
 }
-
 
 .required {
   display: flex;
@@ -98,9 +105,9 @@ cursor: pointer;
 
 .categoryContainer {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 3.5vw;
-  max-width: 100vw; 
+  max-width: 100vw;
   margin-left: 2.5;
 }
 
@@ -125,7 +132,7 @@ cursor: pointer;
   border-radius: 5px;
 }
 
-.photos{
+.photos {
   width: 38vw;
   height: 42vh;
 }
@@ -142,7 +149,6 @@ cursor: pointer;
 .heading {
   margin: 0;
   color: white;
-
 }
 
 .description {
@@ -169,7 +175,7 @@ cursor: pointer;
   margin-left: 30vw;
   margin-top: -10vh;
   padding-top: 3vh;
-  
+
 }
 
 .like {
@@ -193,7 +199,6 @@ cursor: pointer;
   padding-top: 1vh;
   cursor: pointer;
 }
-
 
 .share {
   position: fixed;
@@ -235,28 +240,28 @@ cursor: pointer;
   cursor: pointer;
 }
 
-.Edit{
+.Edit {
   margin-left: 8vw;
   margin-top: -2vh;
-  position: relative; 
+  position: relative;
   background-color: rgba(0, 0, 0, 0.001);
   cursor: pointer;
 }
 
 .edit {
- 
+
   position: relative;
   margin-left: 16vw;
   margin-bottom: 1vh;
   cursor: pointer;
 }
 
-.editText{
+.editText {
   font-size: large;
-  padding-left:0.3vw;
- margin-bottom: 10vh;
+  padding-left: 0.3vw;
+  margin-bottom: 10vh;
   position: fixed;
- 
+
 }
 
 .req {
@@ -272,8 +277,8 @@ cursor: pointer;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); 
-  z-index: 9999; 
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,7 +329,7 @@ cursor: pointer;
   cursor: pointer;
 }
 
-.see{
+.see {
   margin-left: 47vw;
   width: 7vw;
   height: 4vh;
@@ -335,15 +340,14 @@ cursor: pointer;
   cursor: pointer;
 }
 
-
-.slidehead{
+.slidehead {
   color: white;
   font-size: 27px;
   margin-bottom: 0;
   margin-left: 2vw;
 }
 
-.slidedescription{
+.slidedescription {
   color: white;
   font-size: 18px;
   margin-top: 0;
@@ -352,7 +356,6 @@ cursor: pointer;
   overflow-wrap: break-word;
   margin-right: 10vw;
 }
-
 
 .overlay {
   position: fixed;
@@ -376,40 +379,37 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white; 
-  z-index: 1000; 
-  
+  background-color: white;
+  z-index: 1000;
 }
 
-.body{
+.body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
- 
 }
 
-.cut{
+.cut {
   margin-left: 50vw;
   position: fixed;
   margin-top: -50vh;
   cursor: pointer;
 }
 
-.cut2{
+.cut2 {
   margin-left: 50vw;
   position: absolute;
   margin-top: -50vh;
 }
 
-.img{
+.img {
   margin-bottom: 5vh;
 }
 
-.about{
+.about {
   margin-bottom: 5vh;
   margin-top: 4vh;
   cursor: pointer;
-  
 }
 
 .register {
@@ -421,9 +421,10 @@ cursor: pointer;
   background-color: #ff7373;
   margin-top: 2.5vh;
   margin-left: 10vw;
+  cursor: pointer;
 }
 
-.sign{
+.sign {
   width: 10vw;
   height: 5vh;
   border-radius: 2vw;
@@ -431,12 +432,12 @@ cursor: pointer;
   color: white;
   background-color: #73abff;
   margin-top: 2.5vh;
+  cursor: pointer;
 }
 
 .profile {
   position: relative;
   display: inline-block;
-
 }
 
 .profileOverlay {
@@ -453,7 +454,6 @@ cursor: pointer;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  
 }
 
 .logoutButton {
@@ -466,24 +466,22 @@ cursor: pointer;
   width: 10vw;
   margin-left: 3vw;
   height: 6vh;
-  
 }
 
-.name{
+.name {
   color: black;
   margin-left: 5vw;
   margin-top: 2vh;
   font-size: 35px;
 }
 
-.book{
+.book {
   margin-left: 45vw;
   margin-bottom: 5vh;
 }
 
 .imageContainer {
   position: relative;
-
 }
 
 .imageName {
@@ -491,25 +489,21 @@ cursor: pointer;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8); 
-  padding: 5px 10px; 
-  border-radius: 5px; 
-  font-size: 14px; 
-  color: #333; 
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
 }
 
 
 
 
+@media only screen and (max-width: 600px) {
 
-
-@media only screen and (max-width: 600px){
-
-  .body{
+  .body {
     width: 100%;
     height: 100%;
-   
-   
   }
 
   .imageWrapper {
@@ -518,479 +512,447 @@ cursor: pointer;
     padding-bottom: 25px;
     border-radius: 5px;
   }
-  
-
- 
-
-.images {
-  display: flex;
-  flex-direction: row;
-  gap: 5vw;
-  min-width: 100%;
- 
- 
-}
-
-.all{
-  width: 30vw;
-  height: 25vh;
-}
-.health{
-  width: 30vw;
-  height: 25vh;
-}
-.travel{
-  width: 30vw;
-  height: 25vh;
-}
-.food{
-  width: 30vw;
-  height: 25vh;
-}
-.movie{
-  width: 30vw;
-  height: 20vh;
-  margin-top: 3vh;
-}
-.education{
-  width: 30vw;
-  height: 25vh;
-}
-.rightArrow{
-  width: 5.5vw;
-  padding-left: 3vw;
-  margin-top: -1vh;
-}
-
-.leftArrow{
-  width: 10vw;
-}
-
-
-
-.storyDetails{
-  margin-top: 21vh;
-  padding-top: 0;
-}
-
-.storyTitle{
-  color: white;
-  margin-bottom: 0;
-  margin-left: 1.5vw;
-}
-
-.storyDescription{
-  color: white;
-  margin-top: 0;
-  margin-left: 1.5vw;
-}
-
-
-.required {
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-}
-
-.categoryContainer {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 3.5vw;
-  max-width: 100vw; 
-  margin-left: 2vw;
-  margin-right: 5vw;
-}
-
-.bookmarksWrapper{
-  width: 100vh;
-}
-
-.imageContainer {
-  position: relative;
-  display: inline-block;
-  width: 90vw;
-  height: 15vh;
-}
-
-.storyImage {
-  display: block;
-  width: 100%;
-  height: 35vh;
-}
-
-
 
-
-
-.textOverlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 50px;
-}
-
-.heading {
-  margin: 0;
-  color: white;
-
-}
-
-.description {
-  margin: 5px 0;
-  color: white;
-}
-
-.save {
-  position: fixed;
-  left: 5vw;
-  width: 6vw;
-  height: 75px;
-  margin-left: 15vw;
-  margin-top: -6.5vh;
-  padding-top: 3vh;
-  
-}
-
-
-.saved {
-  position: fixed;
-  left: 5vw;
-  width: 6vw;
-  height: 75px;
-  margin-left: 15vw;
-  margin-top: -6.5vh;
-  padding-top: 3vh;
-  
-}
-
-
-
-.like {
-  position: fixed;
-  right: 5vw;
-  width: 8vw;
-  height: 75px;
-  margin-right: 15vw;
-  margin-top: -12vh;
-  padding-top: 1vh;
-}
-
-.liked {
-   position: fixed;
-  right: 5vw;
-  width: 8vw;
-  height: 75px;
-  margin-right: 15vw;
-  margin-top: -5vh;
-  padding-top: 1vh;
-}
-
-.edit {
- 
-  position: relative;
-  margin-left: 28vw;
-  margin-bottom: 1vh;
-  width: 20vw;
-  
-}
-
-
-.share {
-  position: fixed;
-  top: 15vh;
-  right: 33vw;
-  width: 6vw;
-  height: auto;
-  margin-right: -12vw;
-  margin-top: 0vh;
-}
-
-.shared {
-  position: fixed;
-  top: 15vh;
-  right: 33vw;
-  width: 6vw;
-  height: auto;
-  margin-right: -12vw;
-  margin-top: 0vh;
-}
-
-.cancel {
-  position: fixed;
-  top: 16vh;
-  left: 34vw;
-  width: 4.5vw;
-  height: auto;
-  margin-top: 0vh;
-  margin-left: -8vh;
-  
-}
-
-.cancelled {
-  position: fixed;
-  top: 16vh;
-  left: 34vw;
-  width: 4.5vw;
-  height: auto;
-  margin-top: 0vh;
-  margin-left: -8vh;
-}
-
-
-
-.Edit{
-  margin-left: 35vw;
-  margin-top: -2vh;
-  position: relative; 
-  background-color: rgba(0, 0, 0, 0.001);
-}
-
-
-
-.editText{
-  font-size: large;
-  padding-left:0.3vw;
- margin-bottom: 10vh;
-  position: fixed;
- 
-}
-
-
-
-.req {
-  color: black;
-  text-align: center;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-}
-
-.selectedSlideOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7); 
-  z-index: 9999; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.selectedSlideContent {
-  background-color: black;
-  padding-top: 10vh;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  border-radius: 10px;
-  overflow: auto;
-  color: white;
-  height: 70vh;
-  width: 75vw;
-}
-
-.photos{
-  width: 75vw;
-  height: 50vh;
-  padding-left: 0;
-  margin-left: 0;
-  padding-right: 0;
-  margin-right: 0;
-}
-
-.bottomIcons{
-  padding: 0;
-  margin-top: 0;
-}
-
-.title {
- 
-  padding-left: 3vw;
-  
-}
-
-.header {
-  display: flex;
-  gap: 2vw;
-  width: 100vw;
- 
-}
-
-.btn1 {
-  width: 20vw;
-  height: 5vh;
-  border-radius: 2vw;
-  color: white;
-  border: none;
-  background-color: #ff7373;
-  margin-top: 3vh;
-  margin-left: -50vw;
-}
-
-.btn2 {
-  width: 10vw;
-  height: 5vh;
-  border-radius: 2vw;
-  border: none;
-  color: white;
-  background-color: #73abff;
-  margin-top: 3vh;
-}
-.photo{
-  margin-left: -3vw;
-}
-.see{
-  margin-left: 33vw;
-  width: 25vw;
-  height: 5vh;
-  color: white;
-  background-color: #ff7373;
-  border-radius: 1vw;
-  border: none;
-}
-
-
-.slidehead{
-  color: white;
-  font-size: 20px;
-  margin-bottom: 0;
-  margin-left: 5vw;
-  margin-top: 0vh;
-}
-
-.slidedescription{
-  color: white;
-  font-size: 15px;
-  margin-top: 0;
-  margin-left: 5vw;
-  resize: vertical;
-  overflow-wrap: break-word;
-  margin-right: 10vw;
-}
-
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.overlayContent {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-left: 0vw;
-  border-radius: 2vw;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white; 
-  z-index: 1000; 
-  
-}
-
-
-
-.cut{
-  margin-left: 50vw;
-  position: fixed;
-  margin-top: -68vh;
-}
-
-.cut2{
-  margin-left: 50vw;
-  position: absolute;
-  margin-top: -50vh;
-}
-
-.img{
-  margin-bottom: 5vh;
-}
-
-.about{
-  margin-bottom: 5vh;
-  margin-top: 4vh;
-  margin-left: -3vw;
-}
-
-.register {
-  width: 25vw;
-  height: 5vh;
-  border-radius: 2vw;
-  color: white;
-  border: none;
-  background-color: #ff7373;
-  margin-top: 2.5vh;
-  margin-left: -40vw;
-}
-
-.sign{
-  width: 15vw;
-  height: 5vh;
-  border-radius: 2vw;
-  border: none;
-  color: white;
-  background-color: #73abff;
-  margin-top: 2.5vh;
-}
-
-.profile {
-  position: relative;
-  display: inline-block;
-
-}
-
-.profileOverlay {
-  display: flex;
-  flex-direction: column;
-  width: 25vw;
-  height: 18vh;
-  margin-left: -20vw;
-  position: absolute;
-  margin-top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 0.5vw;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  
-}
-
-.logoutButton {
-  background-color: #ff6961;
-  color: #fff;
-  border: none;
-  margin-top: 2vh;
-  border-radius: 1vw;
-  cursor: pointer;
-  width: 20vw;
-  margin-left: 3vw;
-  height: 6vh;
-  
-}
-
-.name{
-  color: black;
-  margin-left: 5vw;
-  margin-top: 2vh;
-  font-size: 35px;
-}
-
-.book{
-  margin-left: 15vw;
-  margin-bottom: 5vh;
-}
-
+  .images {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    min-width: 100%;
+  }
+
+  .all {
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .health {
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .travel {
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .food {
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .movie {
+    width: 30vw;
+    height: 20vh;
+    margin-top: 3vh;
+  }
+
+  .education {
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .rightArrow {
+    width: 5.5vw;
+    padding-left: 3vw;
+    margin-top: -1vh;
+  }
+
+  .leftArrow {
+    width: 10vw;
+  }
+
+  .storyDetails {
+    margin-top: 21vh;
+    padding-top: 0;
+  }
+
+  .storyTitle {
+    color: white;
+    margin-bottom: 0;
+    margin-left: 1.5vw;
+  }
+
+  .storyDescription {
+    color: white;
+    margin-top: 0;
+    margin-left: 1.5vw;
+  }
+
+  .required {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .categoryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5vw;
+    max-width: 100vw;
+    margin-left: 2vw;
+    margin-right: 5vw;
+  }
+
+  .bookmarksWrapper {
+    width: 100vh;
+  }
+
+  .imageContainer {
+    position: relative;
+    display: inline-block;
+    width: 90vw;
+    height: 15vh;
+  }
+
+  .storyImage {
+    display: block;
+    width: 100%;
+    height: 35vh;
+  }
+
+  .textOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+
+  .heading {
+    margin: 0;
+    color: white;
+
+  }
+
+  .description {
+    margin: 5px 0;
+    color: white;
+  }
+
+  .save {
+    position: fixed;
+    left: 5vw;
+    width: 6vw;
+    height: 75px;
+    margin-left: 15vw;
+    margin-top: -6.5vh;
+    padding-top: 3vh;
+  }
+
+  .saved {
+    position: fixed;
+    left: 5vw;
+    width: 6vw;
+    height: 75px;
+    margin-left: 15vw;
+    margin-top: -6.5vh;
+    padding-top: 3vh;
+  }
+
+  .like {
+    position: fixed;
+    right: 5vw;
+    width: 8vw;
+    height: 75px;
+    margin-right: 15vw;
+    margin-top: -12vh;
+    padding-top: 1vh;
+  }
+
+  .liked {
+    position: fixed;
+    right: 5vw;
+    width: 8vw;
+    height: 75px;
+    margin-right: 15vw;
+    margin-top: -5vh;
+    padding-top: 1vh;
+  }
+
+  .edit {
+    position: relative;
+    margin-left: 28vw;
+    margin-bottom: 1vh;
+    width: 20vw;
+  }
+
+  .share {
+    position: fixed;
+    top: 15vh;
+    right: 33vw;
+    width: 6vw;
+    height: auto;
+    margin-right: -12vw;
+    margin-top: 0vh;
+  }
+
+  .shared {
+    position: fixed;
+    top: 15vh;
+    right: 33vw;
+    width: 6vw;
+    height: auto;
+    margin-right: -12vw;
+    margin-top: 0vh;
+  }
+
+  .cancel {
+    position: fixed;
+    top: 16vh;
+    left: 34vw;
+    width: 4.5vw;
+    height: auto;
+    margin-top: 0vh;
+    margin-left: -8vh;
+  }
+
+  .cancelled {
+    position: fixed;
+    top: 16vh;
+    left: 34vw;
+    width: 4.5vw;
+    height: auto;
+    margin-top: 0vh;
+    margin-left: -8vh;
+  }
+
+  .Edit {
+    margin-left: 35vw;
+    margin-top: -2vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.001);
+  }
+
+  .editText {
+    font-size: large;
+    padding-left: 0.3vw;
+    margin-bottom: 10vh;
+    position: fixed;
+  }
+
+  .req {
+    color: black;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  .selectedSlideOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .selectedSlideContent {
+    background-color: black;
+    padding-top: 10vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-radius: 10px;
+    overflow: auto;
+    color: white;
+    height: 70vh;
+    width: 75vw;
+  }
+
+  .photos {
+    width: 75vw;
+    height: 50vh;
+    padding-left: 0;
+    margin-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .bottomIcons {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .title {
+    padding-left: 3vw;
+  }
+
+  .header {
+    display: flex;
+    gap: 2vw;
+    width: 100vw;
+  }
+
+  .btn1 {
+    width: 20vw;
+    height: 5vh;
+    border-radius: 2vw;
+    color: white;
+    border: none;
+    background-color: #ff7373;
+    margin-top: 3vh;
+    margin-left: -50vw;
+  }
+
+  .btn2 {
+    width: 10vw;
+    height: 5vh;
+    border-radius: 2vw;
+    border: none;
+    color: white;
+    background-color: #73abff;
+    margin-top: 3vh;
+  }
+
+  .photo {
+    margin-left: -3vw;
+  }
+
+  .see {
+    margin-left: 33vw;
+    width: 25vw;
+    height: 5vh;
+    color: white;
+    background-color: #ff7373;
+    border-radius: 1vw;
+    border: none;
+  }
+
+  .slidehead {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-left: 5vw;
+    margin-top: 0vh;
+  }
+
+  .slidedescription {
+    color: white;
+    font-size: 15px;
+    margin-top: 0;
+    margin-left: 5vw;
+    resize: vertical;
+    overflow-wrap: break-word;
+    margin-right: 10vw;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .overlayContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: 0vw;
+    border-radius: 2vw;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  .cut {
+    margin-left: 50vw;
+    position: fixed;
+    margin-top: -68vh;
+  }
+
+  .cut2 {
+    margin-left: 50vw;
+    position: absolute;
+    margin-top: -50vh;
+  }
+
+  .img {
+    margin-bottom: 5vh;
+  }
+
+  .about {
+    margin-bottom: 5vh;
+    margin-top: 4vh;
+    margin-left: -3vw;
+  }
+
+  .register {
+    width: 25vw;
+    height: 5vh;
+    border-radius: 2vw;
+    color: white;
+    border: none;
+    background-color: #ff7373;
+    margin-top: 2.5vh;
+    margin-left: -40vw;
+  }
+
+  .sign {
+    width: 15vw;
+    height: 5vh;
+    border-radius: 2vw;
+    border: none;
+    color: white;
+    background-color: #73abff;
+    margin-top: 2.5vh;
+  }
+
+  .profile {
+    position: relative;
+    display: inline-block;
+  }
+
+  .profileOverlay {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 18vh;
+    margin-left: -20vw;
+    position: absolute;
+    margin-top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 0.5vw;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .logoutButton {
+    background-color: #ff6961;
+    color: #fff;
+    border: none;
+    margin-top: 2vh;
+    border-radius: 1vw;
+    cursor: pointer;
+    width: 20vw;
+    margin-left: 3vw;
+    height: 6vh;
+  }
+
+  .name {
+    color: black;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    font-size: 35px;
+  }
+
+  .book {
+    margin-left: 15vw;
+    margin-bottom: 5vh;
+  }
 
 }

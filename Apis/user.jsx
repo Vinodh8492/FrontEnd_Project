@@ -22,4 +22,12 @@ export const registerUser = async ({ Username, Password }) => {
     }
 }
 
-
+export const getUserDetails = async (Username) => {
+    try {
+        const reqUrl = `${backendUrl}/details`;
+        const response = await axios.post(reqUrl, { Username })
+        return response.data
+    } catch (error) {
+        console.log(error)
+    }
+}

@@ -1,4 +1,4 @@
-.body{
+.body {
     height: 80vh;
     width: 80vw;
     margin-left: 10vw;
@@ -7,41 +7,39 @@
     margin-bottom: 10vh;
 }
 
-.heading{
+.heading {
     font-size: 50px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     margin-bottom: 0;
 }
 
-.description{
+.description {
     font-size: 20px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
-.image{
-   
+.image {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     width: 50vw;
     margin-left: 15vw;
     height: auto;
 }
 
-@media only screen and (max-width: 600px){
-    .image{
-   
+@media only screen and (max-width: 600px) {
+    .image {
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
         width: 85vw;
         margin-left: -5vw;
         height: 50vh;
     }
 
-   
+
 }

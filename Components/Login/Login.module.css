@@ -1,5 +1,4 @@
-
-.form{
+.form {
     display: flex;
     flex-direction: column;
     margin-left: 15vw;
@@ -9,172 +8,164 @@
     position: relative;
 }
 
-.head{
+.head {
     margin-left: 20vw;
     margin-top: 20vh;
     margin-bottom: 10vh;
 }
+
 .eyeIcon {
     position: inherit;
-    left: 79vw; 
-    top: 45.5%; 
+    left: 79vw;
+    top: 45.5%;
     transform: translateY(-50%);
-    width: 2vw; 
+    width: 2vw;
     height: auto;
     cursor: pointer;
     margin-top: 3.3vh;
     margin-left: -3vw;
 }
 
-
 .container {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    height: 30vh; 
+    align-items: center;
+    height: 30vh;
 }
 
 .button {
-   position: relative;
-   width: 18vw;
-   height: 7vh;
-   border-radius: 3vw;
-   font-size: medium;
-   color: black;
-   border-color: black;
-   background-color: lightskyblue;
-   
+    position: relative;
+    width: 18vw;
+    height: 7vh;
+    border-radius: 3vw;
+    font-size: medium;
+    color: black;
+    border-color: black;
+    background-color: lightskyblue;
+    cursor: pointer;
 }
 
-.username{
+.username {
     display: flex;
     flex-direction: row;
 }
 
-.password{
+.password {
     display: flex;
     flex-direction: row;
-  
 }
 
-.text{
-    font-size:30px;
+.text {
+    font-size: 30px;
     font-weight: 300;
     margin-left: -5vw;
     margin-top: 1vh;
 }
 
-.input1{
-    margin-left:8vw;
+.input1 {
+    margin-left: 8vw;
     width: 30vw;
     height: 5vh;
 }
 
-.input2{
-    margin-left:8.5vw;
+.input2 {
+    margin-left: 8.5vw;
     width: 30vw;
     height: 5vh;
 }
 
-.message{
+.message {
     margin-left: 25vw;
     margin-top: 5vh;
     color: red;
-    font-size:large
+    font-size: large
 }
 
 
 
+@media only screen and (max-width: 600px) {
 
 
-@media only screen and (max-width: 600px){
-  
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+        margin-top: 0;
+    }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5vw;
-    margin-top: 0;
+    .passwordInput {
+        position: relative;
+    }
+
+    .head {
+        margin-left: 5vw;
+        margin-top: 20vh;
+        margin-bottom: 5vh;
+        font-size: x-large;
+    }
+
+    .eyeIcon {
+        position: absolute;
+        left: 79vw;
+        top: 48%;
+        transform: translateY(-50%);
+        width: 2vw;
+        height: auto;
+        cursor: pointer;
+        margin-top: 8vh;
+        margin-left: -19vw;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+    }
+
+    .button {
+        position: relative;
+        width: 25vw;
+        height: 7vh;
+        border-radius: 3vw;
+        font-size: medium;
+        color: black;
+        border-color: black;
+        background-color: lightskyblue;
+    }
+
+    .username {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .password {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: -1vw;
+        margin-top: 1vh;
+    }
+
+    .input1 {
+        margin-left: 5vw;
+        width: 30vw;
+        height: 5vh;
+        font-size: medium;
+    }
+
+    .input2 {
+        margin-left: 5.5vw;
+        width: 30vw;
+        height: 5vh;
+        font-size: medium;
+    }
+
+    .message {
+        margin-left: 10vw;
+    }
 }
-
-.passwordInput {
-    position: relative;
-}
-
-.head{
-    margin-left: 5vw;
-    margin-top: 20vh;
-    margin-bottom: 5vh;
-    font-size:x-large;
-}
-.eyeIcon {
-    position: absolute;
-    left: 79vw; 
-    top: 48%; 
-    transform: translateY(-50%);
-    width: 2vw; 
-    height: auto;
-    cursor: pointer;
-    margin-top: 8vh;
-    margin-left: -19vw;
-   
-}
-
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 30vh; 
-}
-
-.button {
-   position: relative;
-   width: 25vw;
-   height: 7vh;
-   border-radius: 3vw;
-   font-size: medium;
-   color: black;
-   border-color: black;
-   background-color: lightskyblue;
-   
-}
-
-.username{
-    display: flex;
-    flex-direction: row;
-}
-
-.password{
-    display: flex;
-    flex-direction: row;
-  
-}
-
-.text{
-    font-size:20px;
-    font-weight: bold;
-    margin-left: -1vw;
-    margin-top: 1vh;
-}
-
-.input1{
-    margin-left:5vw;
-    width: 30vw;
-    height: 5vh;
-    font-size: medium;
-}
-
-.input2{
-    margin-left:5.5vw;
-    width: 30vw;
-    height: 5vh;
-    font-size: medium;
-}
-
-.message{
-    margin-left: 10vw;
-}
-}
-
-

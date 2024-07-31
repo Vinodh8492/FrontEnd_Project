@@ -9,7 +9,6 @@ function Login() {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [message, setMessage] = useState('');
 
-
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -26,7 +25,6 @@ function Login() {
             setMessage("Fields can't be empty");
             return;
         }
-
         try {
             const response = await loginUser({ ...formData });
 
@@ -36,20 +34,17 @@ function Login() {
                 localStorage.setItem("name", response.name);
                 console.log("Name :", response.name);
                 alert(response.message);
-
-
+                if (response.message == "User logged in successfully") {
+                    window.location.reload()
+                }
             } else {
-               
                 console.error("Invalid Credentials:", response);
                 setMessage("Invalid Credentials");
             }
         } catch (error) {
-           
             console.error("Error during login:", error);
             setMessage("An error occurred during login");
         }
-
-
     };
 
     return (

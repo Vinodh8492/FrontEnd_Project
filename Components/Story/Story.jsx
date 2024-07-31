@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import styles from './Story.module.css';
 import { createStory } from '../../Apis/stories';
 import { DEFAULT_CATEGORIES } from '../../utils/constants';
 
 function Story() {
+  const navigate = useNavigate()
 
   const name = localStorage.getItem('name')
-
+  if (!name) {
+    localStorage.clear()
+    navigate('/')
+  }
 
   const [slides, setSlides] = useState([
     {
@@ -14,7 +19,7 @@ function Story() {
       Description: '',
       Image: '',
       Category: [],
-      username : name
+      username: name
     },
   ]);
 
@@ -22,7 +27,6 @@ function Story() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     const updatedSlides = slides.map((slide, index) =>
       index === activeSlide ? { ...slide, [name]: value } : slide
     );
@@ -43,12 +47,10 @@ function Story() {
       return alert('You need to add at least 3 slides to post a story.');
     }
 
-   
     if (!isValidUrl(slides[activeSlide].Image)) {
       return alert('Invalid image URL');
     }
 
-    
     const response = await createStory(slides);
     alert(response?.message);
     window.location.reload()
@@ -69,7 +71,7 @@ function Story() {
         Description: '',
         Image: '',
         Category: slides[0].Category,
-        username : name 
+        username: name
       };
       setSlides([...slides, newSlide]);
       setActiveSlide(slides.length);
@@ -80,7 +82,6 @@ function Story() {
 
   return (
     <div>
-
       <div className={styles.head}>
 
         {slides.map((slide, index) => (
@@ -152,8 +153,6 @@ function Story() {
         </form>
         <br />
       </div>
-
-
       <div className={styles.last} >
         <button className={styles.previous} onClick={handlePreviousSlide}>Previous</button>
         <button className={styles.next} onClick={handleNextSlide}>Next</button>
@@ -162,7 +161,6 @@ function Story() {
     </div>
   );
 }
-
 
 function isValidUrl(url) {
   try {
