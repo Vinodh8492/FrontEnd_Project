@@ -50,6 +50,7 @@ function Home() {
   if (!name) {
     localStorage.clear()
   }
+  
 
   const [savedSlides, setSavedSlides] = useState([]);
 
