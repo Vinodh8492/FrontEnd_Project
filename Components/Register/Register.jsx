@@ -33,6 +33,7 @@ function Register() {
         }
         alert(response.message)
         setFormData({ Username: '', Password: '' })
+        localStorage.clear()
     };
 
     return (
