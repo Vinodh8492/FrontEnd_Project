@@ -32,6 +32,10 @@ function Register() {
             return setMessage(response.message)
         }
         alert(response.message)
+        if(response.message == "User Registered Successfully"){
+            window.location.reload()
+            return
+        }
         setFormData({ Username: '', Password: '' })
         localStorage.clear()
     };

@@ -15,15 +15,15 @@
 }
 
 .eyeIcon {
-    position: absolute;
+    position: inherit;
     left: 79vw;
     top: 48%;
     transform: translateY(-50%);
     width: 2vw;
     height: auto;
     cursor: pointer;
-    margin-top: 8vh;
-    margin-left: -19vw;
+    margin-top: 3vh;
+    margin-left: -3vw;
 }
 
 .container {
